@@ -1,0 +1,3 @@
+# ignore specified files or directories recursively
+.idea/
+out/
