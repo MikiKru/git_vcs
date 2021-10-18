@@ -4,20 +4,31 @@ package pl.pbs;
 import java.time.LocalDateTime;
 
 public class User {
-    public String name;
-    public LocalDateTime registrationDateTime;
+    private String name;
+    private String lastName;
+    private LocalDateTime registrationDateTime;
 
-    public User(String name, LocalDateTime registrationDateTime) {
+    public User(String name, String lastName) {
         this.name = name;
-        this.registrationDateTime = registrationDateTime;
+        this.lastName = lastName;
+        this.registrationDateTime = LocalDateTime.now();
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", registrationDateTime=" + registrationDateTime +
                 '}';
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getName() {
